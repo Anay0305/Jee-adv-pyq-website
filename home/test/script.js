@@ -29,7 +29,7 @@ check()
 const urlParams = new URLSearchParams(window.location.search);
 const testId = parseInt(urlParams.get('testid'), 10);
 
-fetch("database.json")
+fetch("test/database.json")
   .then(response => response.json())
   .then(d => {
     let x = d.ids;

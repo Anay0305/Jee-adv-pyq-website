@@ -25,7 +25,7 @@ const root = document.querySelector(":root");
 const themeToggle = document.querySelector("#navbar__logo");
 let currentTheme = 0;
 themeToggle.addEventListener("click", () => {
-  fetch("database.json")
+  fetch("home/database.json")
       .then(response => response.json())
       .then(data => {
         const themes = data.themes;
@@ -39,7 +39,7 @@ themeToggle.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("database.json")
+    fetch("home/database.json")
       .then(response => response.json())
       .then(data => {
         appendTimelineMessages(data.Papers, "memorable");
