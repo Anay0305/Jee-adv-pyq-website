@@ -9,7 +9,7 @@ async function check() {
     const data = await res.json();
     if (data.loggedIn) {}
     else {
-        window.location.href = "/Jee-adv-pyq-website/";
+        window.location.href = "/";
     }
 }
 check()
@@ -75,13 +75,13 @@ function appendTimelineMessages(messages, containerId) {
 
         if (startBtn) {
             startBtn.addEventListener("click", () => {
-              window.location.href = `/Jee-adv-pyq-website/test?testid=${message.id}`;
+              window.location.href = `/test?testid=${message.id}`;
             });
         }
 
         if (reattemptBtn) {
             reattemptBtn.addEventListener("click", () => {
-                window.location.href = `/Jee-adv-pyq-website/test?testid=${message.id}`;
+                window.location.href = `/test?testid=${message.id}`;
             });
         }
     });
