@@ -21,7 +21,7 @@ async function check() {
         }
     }
     else {
-        window.location.href = "/";
+        window.location.href = "/Jee-adv-pyq-website/";
     }
 }
 check()
@@ -29,7 +29,19 @@ check()
 const urlParams = new URLSearchParams(window.location.search);
 const testId = parseInt(urlParams.get('testid'), 10);
 
-
+fetch("database.json")
+  .then(response => response.json())
+  .then(d => {
+    let x = d.ids;
+    if (x.includes(testId)) {
+    } else {
+      window.location.href = "/Jee-adv-pyq-website/home";
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching JSON:", error);
+    window.location.href = "/Jee-adv-pyq-website/home";
+  });
 
 const navbarLogo = document.querySelector("#navbar__logo");
 

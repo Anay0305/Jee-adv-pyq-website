@@ -9,7 +9,7 @@ async function check() {
     const data = await res.json();
     if (data.loggedIn) {}
     else {
-        window.location.href = "/";
+        window.location.href = "/Jee-adv-pyq-website/";
     }
 }
 check()
@@ -75,15 +75,13 @@ function appendTimelineMessages(messages, containerId) {
 
         if (startBtn) {
             startBtn.addEventListener("click", () => {
-                const url = `/test?testid=${message.id}`;
-                console.log("Navigating to:", url); // Log the URL to check
-                window.location.assign(url);
+              window.location.href = `/Jee-adv-pyq-website/test?testid=${message.id}`;
             });
         }
 
         if (reattemptBtn) {
             reattemptBtn.addEventListener("click", () => {
-                window.location.href = `/test?testid=${message.id}`;
+                window.location.href = `/Jee-adv-pyq-website/test?testid=${message.id}`;
             });
         }
     });
