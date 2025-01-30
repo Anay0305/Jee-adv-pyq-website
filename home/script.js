@@ -75,7 +75,7 @@ function appendTimelineMessages(messages, containerId) {
 
         if (startBtn) {
             startBtn.addEventListener("click", () => {
-                const url = `/test/index.html?testid=${message.id}`;
+                const url = `/test?testid=${message.id}`;
                 console.log("Navigating to:", url); // Log the URL to check
                 window.location.assign(url);
             });
